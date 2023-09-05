@@ -1,0 +1,41 @@
+Link docs: https://docs.python.org/3/library/io.html
+
+File operation, atau operasi berkas, merujuk pada proses pembacaan, penulisan, manipulasi, dan pengelolaan berkas atau data yang disimpan dalam sistem berkas komputer. Dalam konteks pemrograman, operasi berkas biasanya mencakup:
+
+1. **Membuka Berkas (File Opening)**:
+   - Membuka berkas yang ada dalam sistem file untuk operasi selanjutnya. Operasi ini melibatkan pemilihan berkas yang akan digunakan dan mode operasional (misalnya, mode baca atau mode tulis).
+
+2. **Membaca Berkas (File Reading)**:
+   - Membaca data dari berkas yang telah dibuka. Ini dapat dilakukan dengan membaca seluruh berkas atau membaca berkas baris per baris.
+
+3. **Menulis ke Berkas (File Writing)**:
+   - Menulis data ke berkas yang telah dibuka. Ini bisa berarti menambahkan data ke berkas yang sudah ada atau membuat berkas baru jika belum ada.
+
+4. **Menutup Berkas (File Closing)**:
+   - Menutup berkas yang telah dibuka. Ini penting untuk memastikan bahwa sumber daya sistem berkas dibebaskan dan berkas tidak terkunci untuk penggunaan lain.
+
+5. **Memindahkan atau Mengganti Berkas (File Moving atau Renaming)**:
+   - Memindahkan atau mengganti nama berkas dalam sistem file.
+
+6. **Menghapus Berkas (File Deletion)**:
+   - Menghapus berkas dari sistem file.
+
+7. **Manipulasi Metadata Berkas (File Metadata Manipulation)**:
+   - Memanipulasi atribut-atribut metadata berkas seperti izin, waktu modifikasi, dan atribut lainnya.
+
+Operasi berkas sangat penting dalam pemrograman karena berkas sering digunakan untuk menyimpan dan mengakses data. Pemrosesan berkas dapat melibatkan berbagai jenis data, termasuk teks, gambar, audio, video, dan banyak lagi. Oleh karena itu, pemahaman tentang operasi berkas adalah salah satu aspek yang penting dalam pengembangan perangkat lunak. Python, seperti bahasa pemrograman lainnya, menyediakan berbagai fungsi dan metode untuk memfasilitasi operasi berkas.
+
+
+"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+"w" - Write - Opens a file for writing, creates the file if it does not exist
+
+"x" - Create - Creates the specified file, returns an error if the file exists
+
+In addition you can specify if the file should be handled as binary or text mode
+
+"t" - Text - Default value. Text mode
+
+"b" - Binary - Binary mode (e.g. images)

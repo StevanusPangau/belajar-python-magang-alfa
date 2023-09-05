@@ -1,3 +1,5 @@
+Link docs : https://docs.python.org/3.10/library/string.html
+
 Menggabungkan String (Concatenation):
     Menggabungkan dua atau lebih string menjadi satu string menggunakan operator + atau metode str.join().
 
