@@ -1,0 +1,3 @@
+Link docs : https://docs.python.org/3/tutorial/errors.html
+
+Error handling (penanganan kesalahan) adalah konsep dalam pemrograman yang memungkinkan Anda untuk mengidentifikasi, menangani, dan merespons kesalahan yang terjadi dalam program Anda dengan cara yang terkontrol.
