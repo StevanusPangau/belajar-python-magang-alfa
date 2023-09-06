@@ -1,0 +1,15 @@
+link docs : https://docs.python.org/3/library/concurrency.html
+
+Concurrency adalah konsep dalam pemrograman di mana beberapa tugas atau potongan kode dieksekusi secara bersamaan atau seolah-olah berjalan secara bersamaan, tetapi bukan dalam arti yang sama dengan paralelisme. Dalam konteks Python, concurrency biasanya digunakan untuk mengatasi tugas-tugas yang bersifat I/O-bound, seperti meminta data dari internet atau membaca/ menulis ke file, tanpa harus menunggu satu tugas selesai sebelum memulai yang lain.
+
+Terdapat beberapa pendekatan dalam Python untuk mencapai concurrency:
+
+Threading: Modul threading dalam Python memungkinkan Anda untuk membuat thread (benang) yang berjalan secara bersamaan di dalam satu proses. Meskipun thread-thread ini berbagi memori utama, GIL (Global Interpreter Lock) di Python membatasi hanya satu thread yang dapat menjalankan kode Python pada satu waktu. Ini membuat threading cocok untuk menangani tugas-tugas I/O-bound, tetapi kurang efektif untuk tugas-tugas CPU-bound.
+
+Multiprocessing: Modul multiprocessing memungkinkan Anda untuk membuat beberapa proses yang berjalan secara bersamaan. Setiap proses memiliki interpretor Python yang terpisah dan GIL tidak berlaku di antara proses. Ini membuat multiprocessing cocok untuk menangani tugas-tugas CPU-bound, yang membutuhkan pemrosesan paralel sejati.
+
+Asyncio: Modul asyncio merupakan bagian dari Python's standard library yang memungkinkan Anda untuk membuat program berbasis event loop dengan menggunakan "async/await". Dalam pendekatan ini, tugas-tugas yang bersifat I/O-bound dapat "menunggu" dengan cara yang efisien tanpa blok program secara keseluruhan. Ini sangat cocok untuk aplikasi berbasis jaringan seperti server web atau bot yang berinteraksi dengan sumber daya jarak jauh.
+
+Celery: Celery adalah pustaka khusus yang digunakan untuk mengatasi tugas-tugas yang bersifat asinkron (seperti pemrosesan antrian, tugas latar belakang) dalam aplikasi Python. Ini memungkinkan Anda untuk mengirimkan tugas-tugas ke "worker" yang berjalan secara terpisah.
+
+Concurrency sangat penting dalam pengembangan perangkat lunak modern, terutama saat Anda ingin meningkatkan kinerja aplikasi Anda dan menjawab permintaan secara efisien. Pilihan antara pendekatan threading, multiprocessing, asyncio, atau pustaka lainnya tergantung pada jenis tugas yang akan Anda tangani dan kebutuhan aplikasi Anda.
