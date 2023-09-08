@@ -16,7 +16,7 @@ class Xioami(Handphone):
     def __init__(self):
         super().__init__()
         # Overriding
-        self.lebar = 50
+        # self.lebar = 50
         self.varA = "Isi"
 
     # Override Function
@@ -29,4 +29,4 @@ class Xioami(Handphone):
 # print(hp.getPanjang())
 
 xioami = Xioami()
-print(xioami.getPanjang())
+print(xioami.lebar)
