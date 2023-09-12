@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="test1">Test 1</button>
+    <button class="test2">Test2.1</button>
+    <button class="test2">Test2.2</button>
+
+    <script>
+      let test1 = document.getElementById('test1');
+      console.log(test1.constructor.name);
+      test1.onclick = function () {
+        alert('Clicked');
+      };
+
+      let [test2_1, test2_2] = document.getElementsByClassName('test2');
+    </script>
+  </body>
+</html>

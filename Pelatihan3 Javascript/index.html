@@ -22,6 +22,7 @@
       ////////////////////////////////////////
 
       // Tipe Data Primitive
+      console.warn('Tipe Data Primitive');
       let a = 1;
       let b = 1.9;
       let c = 'test';
@@ -34,6 +35,7 @@
 
       ////////////////////////////////////////
 
+      console.warn('Tipe Data Object');
       let e = function () {
         console.log('function e');
       };
@@ -47,11 +49,13 @@
 
       ////////////////////////////////////////
 
+      console.warn('Menamai Tipe Data Symbol');
       let $ = 'abc';
       let _ = 'abcdef';
 
       ////////////////////////////////////////
 
+      console.warn('Operator Aritmatika');
       let angka = 1;
       console.log((angka += 1));
       console.log((angka -= 1));
@@ -189,6 +193,95 @@
       };
 
       person.sayHello('Pangau');
+
+      let student1 = {
+        nama: 'Evan',
+        eat: function () {
+          console.log(this);
+          console.log(this.nama + ' sedang makan');
+        },
+      };
+
+      let student2 = {
+        nama: 'Stevanus',
+        eat: () => {
+          console.log(this);
+          console.log(this.nama + ' sedang makan');
+        },
+      };
+
+      // this = window
+      let student3 = {
+        nama: 'Vanss',
+        eat: function () {
+          let student4 = {
+            nama: 'Katzu',
+            // this = student3
+            eat: () => {
+              console.log(this);
+            },
+            // this = student4
+            eats: function () {
+              console.log(this);
+            },
+          };
+          student4.eat();
+          student4.eats();
+        },
+      };
+
+      student1.eat();
+      student2.eat();
+      console.warn('Student 3');
+      student3.eat();
+
+      ////////////////////////////////////////
+
+      console.warn('Closure');
+      function makan() {
+        console.log('Saya Makan');
+        function minum() {
+          console.log('Saya Minum');
+          function tidur() {
+            console.log('Saya Tidur');
+          }
+          return tidur;
+        }
+        return minum;
+      }
+
+      let mkn = makan();
+      let mnm = mkn();
+      mnm();
+      //makan()();
+
+      ////////////////////////////////////////
+
+      console.warn('Array');
+      let array_a = [1, 2, 3, 4, 5];
+      array_a.push(6, 7);
+      array_a.pop();
+
+      console.log(array_a);
+
+      ////////////////////////////////////////
+      console.warn('Passing Parameter By Value');
+      function passByValue(param) {
+        param = 'new value';
+        console.log(param);
+      }
+      let xyz = 'old value';
+      passByValue(xyz);
+      console.log(xyz);
+
+      console.warn('Passing Parameter By Reference');
+      function passByRef(param) {
+        param.pop();
+      }
+
+      let array_b = [10, 20, 30, 40, 50];
+      passByRef(array_b);
+      console.log(array_b);
     </script>
   </body>
 </html>

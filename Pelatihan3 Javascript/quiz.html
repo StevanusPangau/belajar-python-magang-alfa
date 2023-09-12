@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Soal 1
+      // for = for adalah keyword yang digunakan untuk melakukan perulangan, biasanya digunakan untuk perulangan yang sudah diketahui jumlah perulangannya
+      // foreach = foreach adalah method yang digunakan untuk melakukan perulangan, biasanya digunakan untuk perulangan yang belum diketahui jumlah perulangannya seperti array atau object
+      // every = every adalah method yang digunakan untuk melakukan pengecekan pada setiap elemen array, jika semua elemen array memenuhi kondisi yang diberikan maka akan mengembalikan nilai true, jika salah satu elemen array tidak memenuhi kondisi yang diberikan maka akan mengembalikan nilai false
+
+      // Soal 2
+      let nim = '672020273';
+      console.log(nim.substring(0, 2));
+
+      // Soal 3
+      let array = ['Udin', 'Ibu', 'Toper', 'Ricky', 'Ayah', 'Jo'];
+      array.sort();
+      array.pop();
+      console.log(array);
+
+      // Soal 4
+      var data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+      var status = false;
+      var count = 0;
+
+      for (let i = 0; i < data.length; i++) {
+        if (data[i] % 2 == 0) {
+          if (data[i] % 5 == 0) {
+            count += data[i];
+            console.log('Evan_' + data[i]);
+          } else {
+            console.log('Genap');
+          }
+        } else {
+          if (data[i] % 5 == 0) {
+            count += data[i];
+            console.log('Evan_' + data[i]);
+          } else {
+            console.log('Ganjil');
+          }
+        }
+
+        if (count == 50) {
+          status = true;
+          console.log(status + ', ' + count);
+        }
+      }
+    </script>
+  </body>
+</html>
