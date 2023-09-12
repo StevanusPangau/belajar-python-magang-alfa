@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+  </head>
+  <body>
+    <script>
+      /*
+      var ini_variable1 = 1;
+      let ini_variable2 = 2;
+      const ini_variable3 = 'tiga';
+      ini_variable4 = 'empat';
+
+      ini_variable1 = 5;
+      ini_variable2 = 6;
+      console.log(ini_variable1);
+      console.log(ini_variable2);
+      */
+
+      ////////////////////////////////////////
+
+      // Tipe Data Primitive
+      let a = 1;
+      let b = 1.9;
+      let c = 'test';
+      let d = true;
+
+      console.log(a, typeof a, a.constructor.name);
+      console.log(b, typeof b, a.constructor.name);
+      console.log(c, typeof c, a.constructor.name);
+      console.log(d, typeof d, a.constructor.name);
+
+      ////////////////////////////////////////
+
+      let e = function () {
+        console.log('function e');
+      };
+
+      let f = [1, '2', false];
+      let g = { key1: 'value1' };
+
+      console.log(e, typeof e, e.constructor.name);
+      console.log(f, typeof f, f.constructor.name);
+      console.log(g, typeof g, g.constructor.name);
+
+      ////////////////////////////////////////
+
+      let $ = 'abc';
+      let _ = 'abcdef';
+
+      ////////////////////////////////////////
+
+      let angka = 1;
+      console.log((angka += 1));
+      console.log((angka -= 1));
+      console.log((angka *= 1));
+      console.log((angka /= 1));
+      console.log((angka %= 1));
+
+      console.log('hello world'.charAt(1));
+      console.log('hello world'.substring(1, 4));
+
+      console.warn('Operator Komparasi');
+      console.log('1' == 1);
+      console.log('1' === 1);
+      console.log('1' != 1);
+      console.log('1' !== 1);
+      console.log('1' > 1);
+      console.log('1' >= 1);
+      console.log('1' < 1);
+      console.log('1' <= 1);
+
+      console.warn('Operator Logika');
+      console.log(true && true);
+      console.log(true && false);
+      console.log(true || true);
+      console.log(true || false);
+      console.log(!true);
+      console.log(!false);
+
+      console.warn('Operator Ternary');
+      console.log(true ? 'benar' : 'salah');
+      console.log(false ? 'benar' : 'salah');
+
+      console.warn('Operator Bitwise');
+      console.log(1 & 1);
+      console.log(1 | 1);
+      console.log(1 ^ 1);
+      console.log(~1);
+      console.log(1 << 1);
+      console.log(1 >> 1);
+      console.log(1 >>> 1);
+
+      ////////////////////////////////////////
+      // Percabangan
+      console.warn('If Else');
+      if (1 == '1') {
+        console.log('A');
+      } else if (1 === '1') {
+        console.log('B');
+      } else {
+        console.log('C');
+      }
+
+      /*
+      console.warn('Switch Case');
+      switch (prompt('Masukkan angka')) {
+        case '1':
+          console.log('A');
+          break;
+        case '2':
+          console.log('B');
+          break;
+        default:
+          console.log('C');
+          break;
+      }
+      */
+
+      ////////////////////////////////////////
+      // Perulangan
+      let object1 = { a: 1, b: 2, c: 3 };
+      let array1 = [1, 2, 3, 4, 5];
+
+      console.warn('For Object');
+      for (let key in object1) {
+        console.log(key);
+      }
+
+      console.warn('For Array');
+      for (let value of array1) {
+        console.log(value);
+      }
+
+      let array2 = ['satu', 'dua'];
+      array2.forEach(function (value, index) {
+        console.log(value, index);
+      });
+
+      array2.every(function (value, index) {
+        console.log(value, index);
+        return true;
+      });
+
+      ////////////////////////////////////////
+      console.warn('Function');
+      function test1() {
+        return 'test1';
+      }
+
+      function test2(param1, param2) {
+        return param1 + param2;
+      }
+      console.log(test1());
+      console.log(test2(1, 2));
+
+      function test3(...params) {
+        console.log(params);
+      }
+      test3(1, 2, 3, 4, 5);
+
+      console.warn('Anonymous Function');
+      let test4 = function () {
+        console.log('test4');
+        console.log(this);
+      };
+
+      console.warn('Arrow Function');
+      let test5 = () => {
+        console.log('test5');
+        console.log(this);
+      };
+
+      test4();
+      test5();
+
+      console.warn('Function di Object');
+      const person = {
+        name: 'Evan',
+        sayHello: (name) => {
+          console.info(`Hello ${name}`);
+
+          //   perbedaan dengan memakai function
+          console.info(this); // mengacu pada window
+          console.info(`Hello ${name} My Name Is ${this.name}`); // tidak bisa
+        },
+      };
+
+      person.sayHello('Pangau');
+    </script>
+  </body>
+</html>
